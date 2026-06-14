@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-sakura-50: #fff5f6;
+  --color-sakura-100: #ffebe0;
+  --color-sakura-200: #ffd1dc;
+  --color-sakura-300: #ffafc1;
+  --color-sakura-400: #ff8ca3;
+  --color-sakura-500: #f75f81;
+  --color-sakura-600: #e03b60;
+
+  /* Artistic Flair Design Palette */
+  --color-artistic-cream: #F9F7F2;
+  --color-artistic-beige: #E8DFD8;
+  --color-artistic-sand: #F2EBE4;
+  --color-artistic-coffee: #4A3F35;
+  --color-artistic-sepia: #A38E7A;
+  --color-artistic-charcoal: #2C2C2C;
+  --color-artistic-taupe: #8E7F73;
+  --color-artistic-dust: #7A6C5F;
+  --color-artistic-clay: #63564A;
+  --color-artistic-mud: #3D342D;
+  --color-artistic-rose: #E03B60;
+  
+  --animate-float-slow: float-slow 8s ease-in-out infinite;
+  --animate-sway: sway 4s ease-in-out infinite alternate;
+  --animate-heartbeat-slow: heartbeat-slow 2.5s ease-in-out infinite;
+  --animate-aurora: aurora 20s linear infinite;
+}
+
+@layer utilities {
+  .text-glow-pink {
+    text-shadow: 0 0 12px rgba(247, 95, 129, 0.4);
+  }
+  .text-glow-white {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Custom CSS Keyframe Animations for Spring Sakura & Atmosphere */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(15deg);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-10px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(10px) rotate(5deg);
+  }
+}
+
+@keyframes heartbeat-slow {
+  0%, 100%, 30% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.08);
+  }
+  45% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Sakura Falling Keyframes */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(105vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(247, 95, 129, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(247, 95, 129, 0.4);
+}

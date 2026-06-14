@@ -1,0 +1,6 @@
+{
+  "name": "To Jessie",
+  "description": "A special, beautiful appreciation site for Jessie, celebrating our story, dates, and love.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
